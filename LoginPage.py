@@ -25,6 +25,6 @@ class LoginPage():
         print("click button_login")
         print("выполняются действия, когда юзер нейм = стандарт")
 
-        elif login_name == "locked_out_user":lllll
+        elif login_name == "locked_out_user":
 
         print("выполняются действия, когда юзер нейм = locked out user")
