@@ -16,5 +16,23 @@ class LogOutPage():
             item_logout = WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, "//a[@id='logout_sidebar_link']")))
             item_logout.click()
             print("нажать на пункт меню бургера logout")
-        elif login_name == "locked_out_user":
-            print("рефрещ")
+
+        # elif login_name == "locked_out_user":
+        #     print("обновить страницу")
+        #     в LoginPage обновляем, значит здесь не пишем этого пользователя?
+
+        elif login_name == "problem_user":
+            menu_burger = WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, "//button[@id='react-burger-menu-btn']")))
+            menu_burger.click()
+            print("нажать на бургер")
+            item_logout = WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, "//a[@id='logout_sidebar_link']")))
+            item_logout.click()
+            print("нажать на пункт меню бургера logout")
+
+        elif login_name == "performance_glitch_user":
+            menu_burger = WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, "//button[@id='react-burger-menu-btn']")))
+            menu_burger.click()
+            print("нажать на бургер")
+            item_logout = WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, "//a[@id='logout_sidebar_link']")))
+            item_logout.click()
+            print("нажать на пункт меню бургера logout")
