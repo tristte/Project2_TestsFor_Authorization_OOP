@@ -18,8 +18,9 @@ class LogOutPage():
             print("нажать на пункт меню бургера logout")
 
         # elif login_name == "locked_out_user":
+        #     self.driver.refresh
         #     print("обновить страницу")
-        #     в LoginPage обновляем, значит здесь не пишем этого пользователя?
+
 
         elif login_name == "problem_user":
             menu_burger = WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, "//button[@id='react-burger-menu-btn']")))
