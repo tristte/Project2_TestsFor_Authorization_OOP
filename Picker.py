@@ -30,6 +30,15 @@
 # button_login.click()
 # print("click button_login")
 
+countdown_str = ''
 
-print('Гвидо', 'Ван', 'Россум', sep='*', end='-')
-print('Основатель', 'Питона', sep='_', end='!')
+for i in reversed(range(0, 11)):
+    countdown_str = countdown_str + str(i) + ', '
+
+# countdown_str = countdown_str
+#
+# print(countdown_str + " поехали!")
+
+b = 7
+b **= 2
+print(b)

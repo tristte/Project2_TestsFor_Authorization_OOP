@@ -24,7 +24,8 @@ class Test_1():
         password_all = "secret_sauce"
         accepted_usernames = ["standard_user", "locked_out_user", "problem_user", "performance_glitch_user"]  # создаем список имен
 
-        for username in accepted_usernames:  # создаем цикл по списку имен
+        for username in accepted_usernames:   # создаем цикл по списку имен
+            try:
             print("Создаем объект класса LoginPage")
             login = LoginPage(driver)  # создадим переменную, которая будет является экземпляром класса LoginPage
             print("Выполняем авторизацию для пользователя: " + username)
@@ -34,14 +35,16 @@ class Test_1():
             logout = LogOutPage(driver)
             logout.logout(username, password_all)
             print("Выполняем выход для пользователя: " + username)
-
-
-
-
-
-
+            except:
+            self.driver.refresh()
 
 
 # создадим переменную, которая будет является экземпляром класса тест_1
 test = Test_1()
 test.test_LogIn_LogOut()
+
+# # проверка на надпись продукты
+# success_test = WebDriverWait(driver, 30).until(EC.element_to_be_clickable((By.XPATH, "//span[@class='title']")))
+# value_success_test = success_test.text
+# assert value_success_test == "Products"
+# print("success_test!!!!!")

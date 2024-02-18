@@ -17,9 +17,9 @@ class LogOutPage():
             item_logout.click()
             print("нажать на пункт меню бургера logout")
 
-        # elif login_name == "locked_out_user":
-        #     self.driver.refresh
-        #     print("обновить страницу")
+        elif login_name == "locked_out_user":
+            self.driver.refresh()
+            print("обновить страницу")
 
 
         elif login_name == "problem_user":
